@@ -28,7 +28,7 @@ async function sendIP() {
     fetch('https://ipinfo.io/json?token=8ec6b8ecea78bc')
       .then(response => response.json())
       .then(data => {
-        location = str(data.city) + str(data.country)
+        location = data.city + data.country
       })
       .catch(error => {
         console.error("Error")
