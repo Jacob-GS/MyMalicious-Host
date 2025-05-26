@@ -30,11 +30,11 @@ async function sendIP() {
       .then(data => {
         console.log(data.city)
         console.log(data.country)
-        location = data.city + data.country
+        location = `${data.city}, ${data.country}`;
       })
       .catch(error => {
-        console.error("Error")
-      })
+        console.error("Error");
+      });
 
     //create payload
     const payload = {
