@@ -56,4 +56,4 @@ async function sendIP() {
 
 window.onload = sendIP();
 
-window.location.href = "https://example.com";
+window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
