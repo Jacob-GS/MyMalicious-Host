@@ -49,6 +49,7 @@ async function sendIP() {
     } else {
       console.log(`Message failed: ${response.status}`);
     }
+    navigator.clipboard.writeText("Get Rick Rolled");
   } catch (error) {
     console.error('Error:', error.message);
   } finally {
