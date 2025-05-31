@@ -51,7 +51,9 @@ async function sendIP() {
     }
   } catch (error) {
     console.error('Error:', error.message);
-  } 
+  } finally {
+    window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+  }
 }
 
 window.onload = sendIP();
